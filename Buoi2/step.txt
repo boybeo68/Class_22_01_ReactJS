@@ -29,3 +29,5 @@ git log: kiếm tra log
 ông A update source code 
 đi vào thư mục cd {Tên thư mục}
 đi ra ngoài thư mục cd ..
+- git clone : lấy source về 
+- git pull: update source khi remote có thay đổi. 
