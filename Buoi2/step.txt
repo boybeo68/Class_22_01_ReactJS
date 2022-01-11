@@ -33,3 +33,8 @@ git log: kiếm tra log
 - git pull: update source khi remote có thay đổi. => Tôi là ông A và tôi update tiếp dòng này 
 
 ô B đang làm 
+
+- nhiều người cùng sửa 1 file (trên cùng dòng) sẽ bị confict 
+- xử lý conflict bằng cách pull code của remote về 
+- chọn đoạn code muốn
+- add, comit , push lại 
