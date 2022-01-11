@@ -29,7 +29,7 @@ git log: kiếm tra log
 ông A update source code 
 đi vào thư mục cd {Tên thư mục}
 đi ra ngoài thư mục cd ..
-- git clone : lấy source về: Chú ý chỉ sử d khi máy client chưa có project ! abdfadsfa
+- git clone : lấy source về: Chú ý chỉ sử d khi máy client chưa có project !abc
 - git pull: update source khi remote có thay đổi. => Tôi là ông A và tôi update tiếp dòng này 
 
 ô B đang làm 
