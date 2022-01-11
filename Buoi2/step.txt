@@ -38,3 +38,10 @@ git log: kiếm tra log
 - xử lý conflict bằng cách pull code của remote về 
 - chọn đoạn code muốn
 - add, comit , push lại 
+
+git branch {tên nhánh}: tạo nhánh mới
+git branch: list nhánh đang có
+git checkout {tên nhánh}: chuyển nhánh
+
+Sau khi phát triển xong tính năng thì push nhánh lên như bình thường với lênh git push --set-upstream origin {ten nhanh}
+gửi pull request vào nhánh mong muốn
