@@ -47,3 +47,4 @@ Sau khi phát triển xong tính năng thì push nhánh lên như bình thườn
 gửi pull request vào nhánh mong muốn
 demo lại bằng vs code
 thêm tiếp 
+tahy ddoroi file lan nua
