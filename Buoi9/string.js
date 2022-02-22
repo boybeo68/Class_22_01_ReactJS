@@ -61,3 +61,4 @@ const toNomalName = (name) => {
 };
 
 toNomalName("trAn tUan anH");
+// Bài tập về nhà từ 11 -> 17
