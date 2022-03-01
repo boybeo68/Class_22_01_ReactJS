@@ -1,0 +1,18 @@
+{
+  "name": "buoi11",
+  "version": "1.0.0",
+  "description": "learn npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bai11"
+  ],
+  "author": "NguyenThacTung",
+  "license": "ISC",
+  "dependencies": {
+    "shortid": "^2.2.16",
+    "terminal-input": "^1.0.1"
+  }
+}

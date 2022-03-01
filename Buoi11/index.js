@@ -1,3 +1,4 @@
+const shortid = require("shortid");
 // Object
 let people = {
   name: "Tung",
@@ -60,11 +61,10 @@ a.name = "Khoa";
 
 // vận dụng vào bài toán thực tế.
 const data = [
-  { name: "Tung", age: 27, isSchool: false },
-  { name: "Khoa", age: 20, isSchool: true },
-  { name: "Triet", age: 18, isSchool: false },
-  { name: "Hong", age: 15, isSchool: false },
-  { name: "Tring", age: 10, isSchool: false },
+  { name: "Hương", age: 27, isSchool: false },
+  { name: "Hà", age: 20, isSchool: true },
+  { name: "Đức", age: 18, isSchool: false },
+  { name: "Thoa", age: 15, isSchool: false },
 ];
 // Tìm tất cả những người có tuổi lớn hơn 18
 // Tìm tất cả những người còn đang đi học
@@ -84,3 +84,24 @@ console.log(sumAgeAvg / data.length);
 // }, 90);
 // console.log(newSum);
 console.log("test", NaN + 29);
+// sort: => chuyển về string rồi mới sắp xếp
+let arrSort = [1, 2, 8, 4, 5, 10, 6];
+arrSort.sort((a, b) => {
+  if (a > b) {
+    return 1;
+  }
+  if (a < b) {
+    return -1;
+  }
+  return 0;
+});
+// console.log({ arrSort });
+// sắp xếp tên theo độ tuổi tăng dần
+// sắp xếp theo tên AB
+data.sort((sv1, sv2) => {
+  return sv1.name.localeCompare(sv2.name);
+});
+console.log(data);
+console.log("shortid", shortid.generate());
+// npm và yarn.
+// cách cài đặt.
