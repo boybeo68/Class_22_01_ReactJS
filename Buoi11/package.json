@@ -12,7 +12,6 @@
   "author": "NguyenThacTung",
   "license": "ISC",
   "dependencies": {
-    "shortid": "^2.2.16",
-    "terminal-input": "^1.0.1"
+    "readline-sync": "^1.4.10"
   }
 }
