@@ -6,8 +6,6 @@
 // }, 7000);
 // console.log("end");
 
-const { callbackify } = require("util");
-
 // Xử lý bất đồng bộ. => biến bất đồng bộ về đồng bộ.
 
 // console.log("user ấn click để down load dữ liệu từ server");
