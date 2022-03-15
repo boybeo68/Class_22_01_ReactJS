@@ -58,14 +58,14 @@ const kq = (a, b, h) => {
   return tong(a, b)
     .then((resolve) => nhan(resolve, h))
     .then((resolveNhan) => chia(resolveNhan, 3))
-    .then((result) => tong(result, 9));
+    .then((result) => tong(result, 9))
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 kq(2, "Tung", 4)
   .then((result) => console.log("data cuoi", result))
-  .catch((error) => {
-    console.log(error);
-  })
   .finally((data) => {
     console.log("data finale", data);
   });
