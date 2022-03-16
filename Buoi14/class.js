@@ -80,3 +80,5 @@ let hocsinh4 = new ConNguoi("Test", "nữ");
 console.log(hocsinh3.getHoTen());
 console.log(hocsinh4.getData());
 console.log(hocsinh.getData());
+
+// DOM. : Tương tác giữ JS và HTML

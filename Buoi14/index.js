@@ -90,3 +90,4 @@ const ketqua = async (a, b, h) => {
 };
 
 ketqua("test", 2, 5);
+// promise.all và promise.race
