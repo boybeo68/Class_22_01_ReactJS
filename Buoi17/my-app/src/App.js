@@ -7,7 +7,7 @@ import RandomNumber from "./randomGame/RandomNumber";
 export default function App() {
   return (
     <div className="wrap">
-      <RandomNumber />
+      <RandomNumber data={"Tung"} />
     </div>
   );
 }

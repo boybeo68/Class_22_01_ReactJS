@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Body from "./Body";
 import Header from "./Header";
-function RandomNumber() {
+function RandomNumber(prop) {
   // Khai báo state data
   const [randomNumber, setRandomNumber] = useState(0);
   const [inputValue, setInputValue] = useState(0);
@@ -61,11 +61,15 @@ function RandomNumber() {
     setmessage("");
   };
 
+  const props = {
+    randomNumberKey: randomNumber,
+    correctKey: correct,
+  };
   return (
     <div>
       {/* Header */}
       {/* key={value} */}
-      {/* truyền dữ liệu từ cha sang con thông qua props */}
+      {/*props: truyền dữ liệu từ cha sang con  */}
       <Header randomNumberKey={randomNumber} correctKey={correct} />
       {/* Body */}
       <Body
@@ -76,6 +80,7 @@ function RandomNumber() {
         onChangeValue={onChangeValue}
         guess={guess}
       />
+      <p>{prop.data}</p>
     </div>
   );
 }
