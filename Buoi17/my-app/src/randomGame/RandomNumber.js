@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import Chart from "../component/Chart";
 import Body from "./Body";
 import Header from "./Header";
 function RandomNumber(prop) {
+  console.log("render");
   // Khai báo state data
   const [randomNumber, setRandomNumber] = useState(0);
   const [inputValue, setInputValue] = useState(0);
@@ -92,7 +94,15 @@ function RandomNumber(prop) {
         onChangeValue={onChangeValue}
         guess={guess}
       />
-      <p>{prop.data}</p>
+      <p style={{ color: "red" }}>{prop.count}</p>
+      <Chart />
+      <button
+        onClick={() => {
+          prop.inCreeCount(4);
+        }}
+      >
+        Incree
+      </button>
     </div>
   );
 }
@@ -106,3 +116,7 @@ export default RandomNumber;
 // props không thay đổi được
 // state có thể thay đổi được
 // truyền dữ liệu từ component con -> component cha
+// render lại component: Khi state hoặc props thay đổi thì component sẽ render lại
+// chart: biểu đồ chứng khoán. => performance.
+// làm thế nào để khi state, props thay đổi => component chỉ render lại những thứ thực sự cần thiết
+// vd: khi click newGame  -> Chart không bị render lại
