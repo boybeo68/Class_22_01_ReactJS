@@ -8,8 +8,11 @@ function RandomNumber(prop) {
   const [numberOfGuesing, setnumberOfGuesing] = useState(0);
   const [correct, setCorrect] = useState(false);
   const [message, setmessage] = useState("");
+  const [dataHeader, setDataHeader] = useState("data header");
+
   // lifecycle mouting
   const mouting = () => {
+    console.log(prop.data); // Tung
     randomFunction();
   };
   useEffect(mouting, []);
@@ -65,12 +68,21 @@ function RandomNumber(prop) {
     randomNumberKey: randomNumber,
     correctKey: correct,
   };
+  const changeTextChildABC = (dataChild) => {
+    console.log(dataChild);
+    setDataHeader(dataChild);
+  };
   return (
     <div>
       {/* Header */}
       {/* key={value} */}
       {/*props: truyền dữ liệu từ cha sang con  */}
-      <Header randomNumberKey={randomNumber} correctKey={correct} />
+      <Header
+        randomNumberKey={randomNumber}
+        correctKey={correct}
+        dataHeader={dataHeader}
+        changeTextChild={changeTextChildABC}
+      />
       {/* Body */}
       <Body
         numberOfGuesing={numberOfGuesing}
@@ -87,3 +99,10 @@ function RandomNumber(prop) {
 // import và export
 // lifecycle
 export default RandomNumber;
+
+// 1 data trong component: state (useState)
+// 1 data truyền từ compnent cha -> component con (props)
+// Khác nhau giữa state và props.
+// props không thay đổi được
+// state có thể thay đổi được
+// truyền dữ liệu từ component con -> component cha

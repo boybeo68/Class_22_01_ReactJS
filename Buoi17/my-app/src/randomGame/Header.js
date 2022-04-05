@@ -10,7 +10,14 @@ export default function Header(props) {
       <p>
         Tôi đã chọn một số random trong khoảng 1 đến 100, bạn có thể đoán được?
       </p>
-      {/* <p>{props.randomNumberKey}</p> */}
+      <p>{props.dataHeader}</p>
+      <button
+        onClick={() => {
+          props.changeTextChild("data được truyền từ component con");
+        }}
+      >
+        Change text
+      </button>
     </div>
   );
 }
