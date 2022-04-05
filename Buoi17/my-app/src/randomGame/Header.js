@@ -23,3 +23,9 @@ export default function Header(props) {
 }
 
 // làm lại random game -> mục tiêu tự hoàn thành được mà ko cần xem code
+
+// Thực hành:
+// Tạo 1 component tên Wrap
+// Tạo 1 component WrapChild: Năm trong Wrap
+// Truyền count (number) từ Wrap -> WrapChild
+// WrapChild: Thay đổi đối biến count: click để tăng count lên 2 đơn vị
