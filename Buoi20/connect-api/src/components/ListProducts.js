@@ -11,13 +11,16 @@ export default function ListProducts() {
     let result = await axios.get(
       "https://624ede528c5bf4a10542cebf.mockapi.io/products"
     );
+    console.log(result);
     setlistProduct(result.data);
   };
-  
+
   const renderListProduct = (params) => {
-    return listProduct.map((item, index) => {
-      return <p key={index}>{item.name}</p>;
-    });
+    if (listProduct) {
+      return listProduct.map((item, index) => {
+        return <p key={index}>{item.name}</p>;
+      });
+    }
   };
 
   return <div>{renderListProduct()}</div>;
