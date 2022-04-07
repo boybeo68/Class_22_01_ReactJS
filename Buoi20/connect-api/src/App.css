@@ -43,3 +43,26 @@ p {
   color: white;
   text-align: center;
 }
+.formData {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 30px;
+}
+.formData button {
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+.list-wrap {
+  display: flex;
+  flex-direction: row;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+.detail p {
+  background-color: white;
+  padding: 20px;
+  color: red;
+  text-align: center;
+}
