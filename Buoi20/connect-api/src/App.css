@@ -59,10 +59,20 @@ p {
 .detail {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .detail p {
   background-color: white;
   padding: 20px;
   color: red;
   text-align: center;
+  width: 200px;
+  border-bottom: #282c34 1px solid;
+  border-top: #282c34 1px solid;
+  border-right: #282c34 1px solid;
+}
+.list-wrap > p {
+  width: 400px;
+  background-color: #61dafb;
 }
