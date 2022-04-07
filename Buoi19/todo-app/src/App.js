@@ -35,3 +35,28 @@ function App() {
 }
 
 export default App;
+// delete task : gọi todoItem -> todolist -> App.js
+// redux: xử lý data.
+
+// hướng 1: cùng nhau làm 1 project.
+// anh sẽ hướng dẫn mn làm 1, 2 module đầu tiên sau đó mọi người tự hoàn thiện module còn lại
+
+// hướng 2: tự nghĩ project, mỗi người tự có ý tưởng làm project của riêng mình
+// 4 buổi cuối đều sẽ join học, trao đổi, anh sẽ hỗ trợ mọi người giải đáp thắc mắc, solution, bug
+
+// Cách thức triển khai ý tưởng
+
+// chỉ có 1 ý tưởng lớn -> 3 chức năng chính mình thích nhất. 
+
+
+// BE -> chọc vào DB lấy dữ liệu 
+// BE -> tạo ra 1 đường link chưa dữ liệu (gọi là api API)
+// thêm, sửa, xoá được dũ liệu. 
+// API -> cung cấp các phương thức để thêm sửa xoá đc dữ liệu
+
+// GET -> lấy dữ liệu về
+// POST -> đẩy dữ liệu lên 
+// PUT -> update dữ liệu 
+// DELETE -> xoá dữ liệu
+
+// Sử dụng api. 
