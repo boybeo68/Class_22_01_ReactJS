@@ -6,6 +6,8 @@ export default function ListProducts() {
   const [name, setName] = useState("");
   const [description, setdescription] = useState("");
   const [price, setPrice] = useState("");
+  const [isEdit, setIsEdit] = useState(false);
+  const [editId, setEditId] = useState(null);
   useEffect(() => {
     fetchData();
   }, []);
@@ -25,7 +27,16 @@ export default function ListProducts() {
     if (listProduct) {
       return listProduct.map((item, index) => {
         return (
-          <div className="list-wrap">
+          <div
+            onClick={() => {
+              setName(item.name);
+              setdescription(item.description);
+              setPrice(item.price);
+              setEditId(item.id);
+              setIsEdit(true);
+            }}
+            className="list-wrap"
+          >
             <p>{item.name}</p>
             <div className="detail">
               <p>{item.description}</p>
@@ -64,6 +75,28 @@ export default function ListProducts() {
     }
   };
 
+  const editProduct = async () => {
+    try {
+      await axios.put(
+        `https://624ede528c5bf4a10542cebf.mockapi.io/products/${editId}`,
+        {
+          name: name,
+          image: "https://loremflickr.com/320/240",
+          description: description,
+          price: price,
+        }
+      );
+      setName("");
+      setPrice("");
+      setdescription("");
+      fetchData();
+      setIsEdit(false);
+      setEditId(null);
+    } catch (error) {
+      alert("loi api");
+    }
+  };
+
   return (
     <div>
       <div>{renderListProduct()}</div>
@@ -74,7 +107,10 @@ export default function ListProducts() {
         <input value={price} type="number" onChange={onChangePrice} />
         <label htmlFor="">description</label>
         <input value={description} type="text" onChange={onChangeDescription} />
-        <button onClick={addProduct}>add product</button>
+        <button onClick={isEdit ? editProduct : addProduct}>
+          {" "}
+          {isEdit ? "Cập nhật" : "Add product"}
+        </button>
       </div>
     </div>
   );
