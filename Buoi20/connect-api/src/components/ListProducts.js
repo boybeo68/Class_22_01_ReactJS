@@ -8,6 +8,7 @@ export default function ListProducts() {
   const [price, setPrice] = useState("");
   const [isEdit, setIsEdit] = useState(false);
   const [editId, setEditId] = useState(null);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -23,11 +24,13 @@ export default function ListProducts() {
     }
   };
 
+  //
   const renderListProduct = (params) => {
     if (listProduct) {
       return listProduct.map((item, index) => {
         return (
           <div
+            key={index} // cải thiện peformance
             onClick={() => {
               setName(item.name);
               setdescription(item.description);
@@ -115,3 +118,9 @@ export default function ListProducts() {
     </div>
   );
 }
+
+// api: cách để tương tác với dữ liệu của bên thứ 3
+// - 4 buổi này tất cả sẽ cùng làm 1 project, a có thể hướng dẫn 1,2 module -> tự thực hiện các module còn lại, -> buổi cuối bảo vệ đồ án
+// - tự làm project riêng của mình, dành 3 buổi để a review -> buổi cuối sẽ bảo vệ.
+
+// => phương án 1
