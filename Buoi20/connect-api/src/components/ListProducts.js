@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import { Spin } from "antd";
+import "antd/dist/antd.css";
 export default function ListProducts() {
   const [listProduct, setlistProduct] = useState([]);
   const [name, setName] = useState("");
@@ -8,6 +9,7 @@ export default function ListProducts() {
   const [price, setPrice] = useState("");
   const [isEdit, setIsEdit] = useState(false);
   const [editId, setEditId] = useState(null);
+  const [loading, setloading] = useState(null);
 
   useEffect(() => {
     fetchData();
@@ -15,10 +17,12 @@ export default function ListProducts() {
 
   const fetchData = async () => {
     try {
+      setloading(true);
       let result = await axios.get(
         "https://624ede528c5bf4a10542cebf.mockapi.io/products"
       );
       setlistProduct(result.data);
+      setloading(false);
     } catch (error) {
       alert("loi api");
     }
@@ -100,8 +104,10 @@ export default function ListProducts() {
     }
   };
 
+  console.log("render");
   return (
     <div>
+      <Spin />
       <div>{renderListProduct()}</div>
       <div className="formData">
         <label htmlFor="">name</label>
@@ -124,3 +130,11 @@ export default function ListProducts() {
 // - tự làm project riêng của mình, dành 3 buổi để a review -> buổi cuối sẽ bảo vệ.
 
 // => phương án 1
+
+// loading , data(null)
+// setloading true
+// call api
+// setdata => hiển thị ra ui. (React.memo, usememo, useCallback)
+// setloading false
+
+// ảnh hưởng đến perform
