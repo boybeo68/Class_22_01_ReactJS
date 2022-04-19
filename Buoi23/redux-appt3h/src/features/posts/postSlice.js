@@ -45,3 +45,7 @@ export const postSlice = createSlice({
 // Nếu clone data thì cần return ra giá trị state mới
 export const { addPost, sortPost } = postSlice.actions;
 export default postSlice.reducer;
+// npx create-react-app redux-appt3h --template redux
+
+// btvn: làm đầy đủ todo list = redux
+
