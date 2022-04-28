@@ -3,15 +3,14 @@ import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import Post from "./features/posts/Post";
+import Home from "./features/router/Home";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <Counter /> */}
-        <Post />
-      </header>
+      {/* <Counter /> */}
+      {/* <Post /> */}
+      <Home />
     </div>
   );
 }
