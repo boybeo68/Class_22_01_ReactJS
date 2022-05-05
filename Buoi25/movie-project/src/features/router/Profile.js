@@ -12,6 +12,7 @@ export default function Profile({ invoices }) {
         return (
           <button
             onClick={() => {
+              // chuyển màn hình qua code logic js
               navigate(`/profile/${item.name}`);
             }}
             key={index}

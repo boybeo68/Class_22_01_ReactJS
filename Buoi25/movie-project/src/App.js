@@ -42,8 +42,6 @@ const invoices = [
   },
 ];
 function App() {
-
-
   const navbar = () => {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -74,6 +72,7 @@ function App() {
                 </Link>
               </li>
               <li className="nav-item">
+                {/* chuyển màn hình qua view */}
                 <Link className="nav-link" to={"/profile"}>
                   Profile
                 </Link>
@@ -137,3 +136,7 @@ function App() {
 }
 
 export default App;
+
+// chuyển router (link, navigate)
+// get data từ router về sử dụng useParams
+// authen router: khoá lại những router mà khi chưa đăng nhập ko đc truy cập (chuyển lại router login)
